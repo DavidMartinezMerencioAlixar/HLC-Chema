@@ -2,8 +2,7 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-from blog.views import saludo, despedida
-
+from blog.views import saludo, despedida, dameFecha, calculaEdadActual
 
 def main():
     """Run administrative tasks."""
