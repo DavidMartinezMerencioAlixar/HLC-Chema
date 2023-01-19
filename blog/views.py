@@ -1,17 +1,25 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+
 import datetime
 
 # Create your views here.
+class Persona(object):
+    def __init__(self, nombre, apellido):
+        self.nombre = nombre
+        self.apellido = apellido
+
 def saludo(request):
-    return HttpResponse("Esta la primera página del blog")
+    persona = Persona("Chema", "Durán")
+    fecha_actual = datetime.datetime.now()
+    return render(request, "saludo.html", {"nombre_persona":persona.nombre, "apellido_persona":persona.apellido, "fecha_actual":fecha_actual})
 
 def despedida(request):
     return HttpResponse("Esta es la página de despedida")
 
 def dameFecha(request):
     fecha_actual = datetime.datetime.now()
-
+    
     documento = """
     <html>
     <body>
