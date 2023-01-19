@@ -10,9 +10,17 @@ class Persona(object):
         self.apellido = apellido
 
 def saludo(request):
+    #persona = Persona("Chema", "Durán")
+    #fecha_actual = datetime.datetime.now()
+    #return render(request, "saludo.html", {"nombre_persona":persona.nombre, "apellido_persona":persona.apellido, "fecha_actual":fecha_actual})
     persona = Persona("Chema", "Durán")
+    temas_del_curso = ["Formularios", "Modelos", "Vistas", "Despliegue"]
     fecha_actual = datetime.datetime.now()
-    return render(request, "saludo.html", {"nombre_persona":persona.nombre, "apellido_persona":persona.apellido, "fecha_actual":fecha_actual})
+    return render(request, "saludo.html",
+        {"nombre_persona":persona.nombre,
+        "apellido_persona":persona.apellido,
+        "fecha_actual":fecha_actual,
+        "temas" : temas_del_curso})
 
 def despedida(request):
     return HttpResponse("Esta es la página de despedida")

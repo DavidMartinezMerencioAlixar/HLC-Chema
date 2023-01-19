@@ -1,6 +1,14 @@
 <html>
   <body>
-    <h1>La persona se llama: {{nombre_persona}} {{ apellido_persona }}</h1>
-    <p>La fecha actual es {{fecha_actual.day}}</p>
+    <p>La lista de los temas es:</p>
+    <ul>
+    {% if temas %} 
+      {% for tema in temas %}
+      <li>{{ tema }}</li>
+      {% endfor %}
+    {% else %}
+      <li>No hay temas</li>
+    {% endif %}
+    </ul> 
   </body>
 </html>
