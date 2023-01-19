@@ -1,10 +1,15 @@
 <html>
+  {# Esto es un comentario de una línea #}
+  {% comment %}
+    Esto es un
+    comentario multilínea
+  {% endcomment %}
   <body>
     <p>La lista de los temas es:</p>
     <ul>
     {% if temas %} 
       {% for tema in temas %}
-      <li>{{ tema }}</li>
+      <li>{{ tema | upper }}</li>
       {% endfor %}
     {% else %}
       <li>No hay temas</li>
