@@ -1,10 +1,11 @@
-<!--<html>
+<html>
   {# Esto es un comentario de una línea #}
   {% comment %}
     Esto es un
     comentario multilínea
   {% endcomment %}
   <body>
+    {% include "barra.html" %}
     <p>La lista de los temas es:</p>
     <ul>
     {% if temas %} 
@@ -16,6 +17,4 @@
     {% endif %}
     </ul> 
   </body>
-</html> -->
-
-{% include "barra.html" %}
+</html>
