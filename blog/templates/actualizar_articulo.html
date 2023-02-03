@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %} Actualización de artículos {% endblock %}
+{% block content %}
+<p>
+    Artículo con id={{articulo.id}} actualizado.<br>
+    Sus nuevos datos son:
+    <ul>
+        <li>{{articulo.nombre}}</li>
+        <li>{{articulo.seccion}}</li>
+        <li>{{articulo.precio}} €</li>
+    </ul>
+</p>
+{% endblock %}

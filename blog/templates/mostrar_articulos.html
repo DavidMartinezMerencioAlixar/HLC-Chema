@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %} Resultado del filtro hardcore {% endblock %}
+{% block content %}
+
+{% for articulo in articulos %}
+<p>{{articulo.nombre}}, {{articulo.seccion}}, {{articulo.precio}}</p>
+{% endfor %}
+
+{% endblock %}
